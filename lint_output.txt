@@ -1,0 +1,86 @@
+
+> magener-synergy@0.1.0 lint
+> eslint
+
+
+/Users/hitler/Documents/Project/Magener/magener-synergy/app/(main)/contact/page.tsx
+  58:14  warning  'err' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/hitler/Documents/Project/Magener/magener-synergy/app/(main)/services/[slug]/page.tsx
+   79:61  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+   96:23  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  103:27  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/Users/hitler/Documents/Project/Magener/magener-synergy/app/admin/blog/[id]/page.tsx
+  114:11  error  Do not use an `<a>` element to navigate to `/admin/blog/`. Use `<Link />` from `next/link` instead. See: https://nextjs.org/docs/messages/no-html-link-for-pages  @next/next/no-html-link-for-pages
+
+/Users/hitler/Documents/Project/Magener/magener-synergy/app/admin/blog/new/page.tsx
+  111:11  error  Do not use an `<a>` element to navigate to `/admin/blog/`. Use `<Link />` from `next/link` instead. See: https://nextjs.org/docs/messages/no-html-link-for-pages  @next/next/no-html-link-for-pages
+
+/Users/hitler/Documents/Project/Magener/magener-synergy/app/admin/destinations/page.tsx
+  3:24  warning  'CheckCircle' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/hitler/Documents/Project/Magener/magener-synergy/app/admin/login/page.tsx
+   4:8   warning  'Image' is defined but never used                                                                                                                                                                                                                                                        @typescript-eslint/no-unused-vars
+  36:11  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/Users/hitler/Documents/Project/Magener/magener-synergy/app/admin/testimonials/page.tsx
+  131:82  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  131:92  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+/Users/hitler/Documents/Project/Magener/magener-synergy/app/api/contact/route.ts
+  54:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/hitler/Documents/Project/Magener/magener-synergy/components/layout/Footer.tsx
+  13:16  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/Users/hitler/Documents/Project/Magener/magener-synergy/components/layout/MobileMenu.tsx
+  37:15  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/Users/hitler/Documents/Project/Magener/magener-synergy/components/layout/Navbar.tsx
+  43:13  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/Users/hitler/Documents/Project/Magener/magener-synergy/components/sections/Testimonials.tsx
+  47:17  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  47:52  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+/Users/hitler/Documents/Project/Magener/magener-synergy/components/sections/TravelMorph.tsx
+  75:41  warning  'idx' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/hitler/Documents/Project/Magener/magener-synergy/components/sections/VisaSection.tsx
+   2:10  warning  'SectionHeader' is defined but never used                        @typescript-eslint/no-unused-vars
+  49:84  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  54:26  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+/Users/hitler/Documents/Project/Magener/magener-synergy/components/ui/Button.tsx
+  11:56  warning  'asChild' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/Users/hitler/Documents/Project/Magener/magener-synergy/components/ui/InteractiveGlobe.tsx
+  54:10  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/hitler/Documents/Project/Magener/magener-synergy/components/ui/RevealText.tsx
+  15:15  warning  'i' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/Users/hitler/Documents/Project/Magener/magener-synergy/components/ui/ServiceCard.tsx
+  6:9  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/hitler/Documents/Project/Magener/magener-synergy/hooks/useReducedMotion.ts
+  8:5  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/Users/hitler/Documents/Project/Magener/magener-synergy/hooks/useReducedMotion.ts:8:5
+   6 |   useEffect(() => {
+   7 |     const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+>  8 |     setReduced(mq.matches);
+     |     ^^^^^^^^^^ Avoid calling setState() directly within an effect
+   9 |     const handler = (e: MediaQueryListEvent) => setReduced(e.matches);
+  10 |     
+  11 |     // Fallback for older browsers  react-hooks/set-state-in-effect
+
+✖ 26 problems (13 errors, 13 warnings)
+
