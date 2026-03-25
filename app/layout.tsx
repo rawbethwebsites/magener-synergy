@@ -25,6 +25,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   twitter: { card: 'summary_large_image' },
+    icons: { icon: '/MAGENER.png' },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
