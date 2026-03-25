@@ -48,7 +48,9 @@ export default function Footer() {
             <h4 className="text-brand-white text-sm tracking-widest uppercase mb-6">Contact</h4>
             <ul className="space-y-4 text-brand-silver text-sm">
               <li>Plot 242 Mohammadu Buhari Way,<br/>Central Business District,<br/>Abuja, Nigeria</li>
-              <li><a href="tel:+2348100000000" className="hover:text-brand-gold transition-colors">+234 81 000 0000</a></li>
+              <li><a href="tel:+2349168900334" className="hover:text-brand-gold transition-colors">+234 916 890 0334</a></li>
+              <li><a href="tel:+2347069294704" className="hover:text-brand-gold transition-colors">+234 706 929 4704</a></li>
+              <li><a href="mailto:support@magenersynergy.org" className="hover:text-brand-gold transition-colors">support@magenersynergy.org</a></li>
               <li><a href="mailto:info@magenersynergy.org" className="hover:text-brand-gold transition-colors">info@magenersynergy.org</a></li>
             </ul>
           </div>
