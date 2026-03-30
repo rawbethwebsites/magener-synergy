@@ -16,19 +16,19 @@ export interface PackageOption {
 export const SERVICE_PACKAGES: Record<string, PackageOption[]> = {
   'tour-packages': [
     {
-      name: 'Luxembourg Experience (6 Pax)',
+      name: 'Luxembourg Experience',
       image: 'https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1600&h=1000&fit=crop',
       gallery: [
         'https://images.pexels.com/photos/338515/pexels-photo-338515.jpeg?auto=compress&cs=tinysrgb&w=900&h=600&fit=crop',
         'https://images.pexels.com/photos/1619317/pexels-photo-1619317.jpeg?auto=compress&cs=tinysrgb&w=900&h=600&fit=crop',
         'https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=900&h=600&fit=crop',
       ],
-      duration: '6 Pax Private Guided Corporate Tour (Day 2–7 itinerary)',
+      duration: 'Private Guided Corporate Tour (Day 2–7 itinerary)',
       hotel: 'Option A: The Queen Luxury Apartments - Villa Cortina | Option B: Large Retro Chic Flat 100m² in City Center (Parking)',
       tours: 'Day 2: Luxembourg Private Walking Tour With A Professional Guide | Day 3: Trier, Moselle River & Castle Private Day Tour | Day 4: Belgium Thermal Spa, Wellness, Castle Tour & Wine | Day 5: Castles, Forests & Rivers Private Tour (Easy Walks) | Day 6: Luxembourg Private Walking Tour With A Professional Guide | Day 7: 3-hour Food Tour: Uncover the Tastes of Luxembourg',
       price: '',
-      description: 'Destination: Luxembourg. Package type: private guided corporate tour for 6 pax. Clean premium format with two 4-star accommodation options and full itinerary-based costing.',
-      idealFor: 'Corporate teams or private premium groups (6 travelers).',
+      description: 'Destination: Luxembourg. Package type: private guided corporate tour. Clean premium format with two 4-star accommodation options and full itinerary-based planning.',
+      idealFor: 'Corporate teams or private premium groups.',
       excludes: 'Flights, visa, travel insurance, meals, and personal expenses. (Meals not included.)',
       popular: true,
       urgency: 'Ready for immediate booking confirmation',
