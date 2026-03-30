@@ -81,7 +81,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               transition={{ delay: 0.7 }}
               className="mt-12 flex gap-8 text-brand-silver justify-center"
             >
-               <a href="#" className="hover:text-brand-gold transition-colors"><Instagram className="w-6 h-6" /></a>
+               <a href="https://www.instagram.com/magenertravels?utm_source=qr" className="hover:text-brand-gold transition-colors"><Instagram className="w-6 h-6" /></a>
                <a href="#" className="hover:text-brand-gold transition-colors"><Linkedin className="w-6 h-6" /></a>
                <a href="#" className="hover:text-brand-gold transition-colors"><Phone className="w-6 h-6" /></a>
             </motion.div>
