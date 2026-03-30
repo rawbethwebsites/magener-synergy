@@ -16,7 +16,7 @@ export default function Footer() {
                Crafting extraordinary global experiences through premium travel and education consulting.
              </p>
              <div className="flex gap-4 text-brand-silver">
-               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-brand-border flex items-center justify-center hover:border-brand-gold hover:text-brand-gold transition-colors"><Instagram className="w-4 h-4" /></a>
+               <a href="https://www.instagram.com/magenertravels?utm_source=qr" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-brand-border flex items-center justify-center hover:border-brand-gold hover:text-brand-gold transition-colors"><Instagram className="w-4 h-4" /></a>
                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-brand-border flex items-center justify-center hover:border-brand-gold hover:text-brand-gold transition-colors"><Linkedin className="w-4 h-4" /></a>
                <Link href="/contact" className="w-10 h-10 rounded-full border border-brand-border flex items-center justify-center hover:border-brand-gold hover:text-brand-gold transition-colors"><Phone className="w-4 h-4" /></Link>
              </div>
