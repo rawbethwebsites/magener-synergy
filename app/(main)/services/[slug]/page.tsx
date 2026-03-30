@@ -121,9 +121,11 @@ export default async function ServiceDetailPage({
                       <p><span className="text-brand-white">Tours/Inclusions:</span> {pkg.tours}</p>
                       <p><span className="text-brand-white">Not Included:</span> {pkg.excludes}</p>
                     </div>
-                    <p className="text-brand-gold font-semibold mt-4">{pkg.price}</p>
+                    {pkg.price && (
+                      <p className="text-brand-gold font-semibold mt-4">{pkg.price}</p>
+                    )}
                     {pkg.urgency && (
-                      <p className="text-xs text-brand-gold/80 mt-1">{pkg.urgency}</p>
+                      <p className={`text-xs text-brand-gold/80 ${pkg.price ? 'mt-1' : 'mt-4'}`}>{pkg.urgency}</p>
                     )}
                     <Button variant="outline" asChild className="mt-4 w-full justify-center">
                       <Link href={`/contact?service=${encodeURIComponent(service.title)}&package=${encodeURIComponent(pkg.name)}`}>Book This Package</Link>
