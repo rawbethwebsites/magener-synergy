@@ -16,22 +16,22 @@ export interface PackageOption {
 export const SERVICE_PACKAGES: Record<string, PackageOption[]> = {
   'tour-packages': [
     {
-      name: 'Luxembourg Grand Duchy Signature',
+      name: 'Luxembourg Experience (6 Pax)',
       image: 'https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1600&h=1000&fit=crop',
       gallery: [
         'https://images.pexels.com/photos/338515/pexels-photo-338515.jpeg?auto=compress&cs=tinysrgb&w=900&h=600&fit=crop',
         'https://images.pexels.com/photos/1619317/pexels-photo-1619317.jpeg?auto=compress&cs=tinysrgb&w=900&h=600&fit=crop',
         'https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=900&h=600&fit=crop',
       ],
-      duration: '6 Nights / 7 Days',
-      hotel: '5★ Boutique City Hotel (Luxembourg Ville)',
-      tours: 'Old Quarter walking tour, Vianden Castle day trip, Moselle wine route experience',
-      price: '€3,250 per person',
-      description: 'A premium all-in experience for travelers who want Luxembourg’s elegance, culture, and scenic countryside with concierge-level planning from arrival to return.',
-      idealFor: 'Executives, premium couples, and refined leisure travelers.',
-      excludes: 'Schengen visa fees, personal shopping, optional Michelin dining upgrades.',
+      duration: '6 Pax Private Guided Corporate Tour (Day 2–7 itinerary)',
+      hotel: 'Option A: The Queen Luxury Apartments - Villa Cortina (USD 3,279) | Option B: Large Retro Chic Flat 100m² in City Center (USD 1,964)',
+      tours: 'Day 2: Luxembourg Private Walking Tour (USD 582) | Day 3: Trier, Moselle River & Castle Private Day Tour (USD 910) | Day 4: Belgium Thermal Spa, Wellness, Castle Tour & Wine (USD 1,138) | Day 5: Castles, Forests & Rivers Private Tour (USD 1,480) | Day 6: Luxembourg Private Walking Tour (USD 382) | Day 7: 3-hour Food Tour (USD 750)',
+      price: 'Total Tours: USD 5,242 | Package A: USD 8,521 | Package B: USD 7,206',
+      description: 'Destination: Luxembourg. Package type: private guided corporate tour for 6 pax. Clean premium format with two 4-star accommodation options and full itinerary-based costing.',
+      idealFor: 'Corporate teams or private premium groups (6 travelers).',
+      excludes: 'Flights, visa, travel insurance, meals, and personal expenses. (Meals not included.)',
       popular: true,
-      urgency: 'Limited Easter/Summer departure slots currently open',
+      urgency: 'Ready for immediate booking confirmation',
     },
   ],
   'visa-assistance': [
