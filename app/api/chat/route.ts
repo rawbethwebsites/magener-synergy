@@ -14,6 +14,8 @@ Your job:
 - Never invent approvals, prices, or guarantees; present them as estimates unless confirmed.
 - Always end with a clear next step (e.g., “Share destination + travel month so I can guide you”).`;
 
+const trimTrailingSlash = (value: string) => value.replace(/\/+$/, '');
+
 export async function POST(req: Request) {
   try {
     const body = (await req.json()) as { message?: string; history?: ChatMessage[] };
@@ -23,14 +25,15 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'Message is required.' }, { status: 400 });
     }
 
-    const apiKey = process.env.OPENAI_API_KEY;
-    const model = process.env.OPENAI_MODEL ?? 'gpt-4.1-mini';
+    const apiKey = process.env.AI_API_KEY ?? process.env.OPENAI_API_KEY;
+    const baseUrl = trimTrailingSlash(process.env.AI_API_BASE_URL ?? 'https://api.openai.com/v1');
+    const model = process.env.AI_MODEL ?? process.env.OPENAI_MODEL ?? 'gpt-4.1-mini';
 
     if (!apiKey) {
       return NextResponse.json(
         {
           error:
-            'Assistant is not configured yet. Set OPENAI_API_KEY in your environment to enable live chat.'
+            'Assistant is not configured yet. Set AI_API_KEY and AI_MODEL in your environment to enable live chat.'
         },
         { status: 500 }
       );
@@ -38,13 +41,13 @@ export async function POST(req: Request) {
 
     const history = Array.isArray(body.history) ? body.history.slice(-10) : [];
 
-    const input = [
+    const messages = [
       { role: 'system', content: SYSTEM_PROMPT },
       ...history.map((item) => ({ role: item.role, content: item.content })),
       { role: 'user', content: message }
     ];
 
-    const response = await fetch('https://api.openai.com/v1/responses', {
+    const response = await fetch(`${baseUrl}/chat/completions`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -52,7 +55,7 @@ export async function POST(req: Request) {
       },
       body: JSON.stringify({
         model,
-        input,
+        messages,
         temperature: 0.6
       })
     });
@@ -63,10 +66,10 @@ export async function POST(req: Request) {
     }
 
     const data = (await response.json()) as {
-      output_text?: string;
+      choices?: Array<{ message?: { content?: string } }>;
     };
 
-    const reply = data.output_text?.trim();
+    const reply = data.choices?.[0]?.message?.content?.trim();
 
     if (!reply) {
       return NextResponse.json({ error: 'Assistant returned no reply.' }, { status: 502 });
