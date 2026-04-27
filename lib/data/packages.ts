@@ -16,6 +16,24 @@ export interface PackageOption {
 export const SERVICE_PACKAGES: Record<string, PackageOption[]> = {
   'tour-packages': [
     {
+      name: 'Dubai Golden Escape',
+      image: 'https://images.pexels.com/photos/1470502/pexels-photo-1470502.jpeg?auto=compress&cs=tinysrgb&w=1600&h=1000&fit=crop',
+      gallery: [
+        'https://images.pexels.com/photos/3787839/pexels-photo-3787839.jpeg?auto=compress&cs=tinysrgb&w=900&h=600&fit=crop',
+        'https://images.pexels.com/photos/3889855/pexels-photo-3889855.jpeg?auto=compress&cs=tinysrgb&w=900&h=600&fit=crop',
+        'https://images.pexels.com/photos/2030280/pexels-photo-2030280.jpeg?auto=compress&cs=tinysrgb&w=900&h=600&fit=crop',
+      ],
+      duration: '5 Nights / 6 Days',
+      hotel: '4-star hotel stay with daily breakfast, airport transfers, and flexible room upgrade options',
+      tours: 'Desert safari with dinner, Dubai city tour, Marina dhow cruise, Burj Khalifa photo stop, shopping assistance, and travel concierge support',
+      price: 'From $899 per person',
+      description: 'A high-value Dubai getaway built for travellers who want the magic without the planning stress: premium hotel stay, iconic experiences, airport transfers, and concierge support in one clean package.',
+      idealFor: 'Couples, first-time international travellers, birthday trips, small groups, and families who want a polished Dubai experience at a strong entry price.',
+      excludes: 'Flights, UAE visa, travel insurance, tourism tax, meals not listed, and personal expenses.',
+      popular: true,
+      urgency: 'Limited launch slots available for early bookings',
+    },
+    {
       name: 'Luxembourg Experience',
       image: 'https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1600&h=1000&fit=crop',
       gallery: [
