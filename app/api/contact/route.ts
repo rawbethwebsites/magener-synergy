@@ -16,7 +16,9 @@ export async function POST(request: Request) {
     }
 
     const botToken = process.env.TELEGRAM_BOT_TOKEN;
-    const chatId = process.env.TELEGRAM_CHAT_ID;
+    const chatIds = process.env.TELEGRAM_CHAT_ID?.split(',')
+      .map((id) => id.trim())
+      .filter(Boolean);
 
     const text = `🚀 New Lead: Magener Synergy
     
@@ -28,7 +30,7 @@ Service: ${service}
 Message:
 ${message}`;
 
-    if (!botToken || !chatId) {
+    if (!botToken || !chatIds?.length) {
       console.warn("Telegram credentials missing in ENV. Request payload intercepted and logged successfully.");
       console.log(text);
       return NextResponse.json({ success: true, simulated: true });
@@ -36,18 +38,24 @@ ${message}`;
 
     const telegramUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
     
-    const response = await fetch(telegramUrl, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        chat_id: chatId,
-        text: text
-      })
-    });
+    const responses = await Promise.all(
+      chatIds.map((chatId) =>
+        fetch(telegramUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            chat_id: chatId,
+            text: text
+          })
+        })
+      )
+    );
 
-    if (!response.ok) {
-      const errText = await response.text();
-      throw new Error(`Telegram API responded with HTTP ${response.status}: ${errText}`);
+    const failedResponse = responses.find((response) => !response.ok);
+
+    if (failedResponse) {
+      const errText = await failedResponse.text();
+      throw new Error(`Telegram API responded with HTTP ${failedResponse.status}: ${errText}`);
     }
 
     return NextResponse.json({ success: true });
